@@ -33,18 +33,18 @@
 }
 ```
 
+**Response SSE body**:
+
+在输出信息来源的JSON中新加字段 `chat_id` : 用于标记对话 id 这个参数可以用于feedback 来提升语料质量。
+
+data: {"sourceDocs":[{"pageContent"................................"}}],"chat_id":"71746553-1652-4a22-833b-f45e798aa1d1"}
+
 ## 2. Ping
 
 **Endpoint**: `GET {service-url}/api/ping`
 
 **Description**: Test the API to check if the service is running. 测试服务是否在运行
 
-**Request Headers**:
-
-| Parameter Name | Type   | Description       | Required |
-| -------------- | ------ | ----------------- | -------- |
-| Authorization  | Bearer | token             | 必填     |
-| accept         |        | text/event-stream | 可选     |
 
 ## 3. Feedback
 
@@ -67,6 +67,7 @@
 | uid            | string | 用户id                                     | 必填     |
 | stars          | number | [1, 2, 3, 4, 5] 用户评价对话，5最好，1平庸 | 选填     |
 | reason         | string | 反馈原因                                   | 选填     |
+
 ```json
 {
     "chat_id":"8ab304d4-2bb8-4843-8b7f-4eff5a1d1f77",
