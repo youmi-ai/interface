@@ -67,6 +67,7 @@ data: {"sourceDocs":[{"pageContent"................................"}}],"chat_id
 | uid            | string | 用户id                                     | 必填     |
 | stars          | number | [1, 2, 3, 4, 5] 用户评价对话，5最好，1平庸 | 选填     |
 | reason         | string | 反馈原因                                   | 选填     |
+| better_answer  | string | 更好的回答                                 | 选填     |
 
 ```json
 {
