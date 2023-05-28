@@ -39,6 +39,16 @@
 
 data: {"sourceDocs":[{"pageContent"................................"}}],"chat_id":"71746553-1652-4a22-833b-f45e798aa1d1"}
 
+对协议进行如下拓展：
+
+data {"action":"RETRYING"}
+如果系统在SSE中发送该数据包，说明系统内部进行了重试， LLM之前回答一半的内容作废。
+回答一半的定义： 从消息最开始或从上一次BREAK开始计算。
+
+data {"action":"BREAK"}
+代表本次AI回答可以从这里断开， 分多条消息回答，用来应对 wechat 等无法高频编辑历史消息的软件导致需要等超级久才能回复的问题。
+
+
 ## 2. Ping
 
 **Endpoint**: `GET {service-url}/api/ping`
