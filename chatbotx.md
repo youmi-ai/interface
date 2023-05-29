@@ -12,6 +12,7 @@
 | -------------- | ------ | ----------------- | -------- |
 | Authorization  | Bearer | token             | 必填     |
 | accept         |        | text/event-stream | 可选     |
+| Think-Status   |        | 显示AI思考过程的开关 Value=ON | 可选     |
 
 **Request Body**:
 
